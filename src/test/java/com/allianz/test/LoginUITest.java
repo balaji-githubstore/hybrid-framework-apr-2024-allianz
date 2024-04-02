@@ -13,7 +13,7 @@ public class LoginUITest {
 	@Test
 	public void applicationDescriptionTest()
 	{
-		System.out.println("app");
+		System.out.println("app test");
 	}
 
 }
