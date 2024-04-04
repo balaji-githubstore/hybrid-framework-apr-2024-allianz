@@ -15,4 +15,12 @@ public class LoginTest extends AutomationWrapper {
 		//Assert the header - Dashboard
 	}
 
+	@Test
+	public void invalidLoginTest()
+	{
+		driver.findElement(By.name("username")).sendKeys("Admin");
+		//enter password bala123
+		//click on login
+		//Assert the error - Invalid credentials
+	}
 }
