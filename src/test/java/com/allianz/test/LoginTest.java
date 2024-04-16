@@ -1,6 +1,7 @@
 package com.allianz.test;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.allianz.base.AutomationWrapper;
@@ -10,17 +11,21 @@ public class LoginTest extends AutomationWrapper {
 	public void validLoginTest()
 	{
 		driver.findElement(By.name("username")).sendKeys("Admin");
-		//enter password admin123
-		//click on login
-		//Assert the header - Dashboard
+		driver.findElement(By.name("password")).sendKeys("admin123");
+		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+
+		String actualHeader=driver.findElement(By.xpath("//h6[contains(normalize-space(),'Dash')]")).getText();
+		Assert.assertEquals(actualHeader, "Dashboard");
 	}
 
 	@Test
 	public void invalidLoginTest()
 	{
-		driver.findElement(By.name("username")).sendKeys("Admin");
-		//enter password bala123
-		//click on login
-		//Assert the error - Invalid credentials
+		driver.findElement(By.name("username")).sendKeys("john");
+		driver.findElement(By.name("password")).sendKeys("john123");
+		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+		
+		String actualError=driver.findElement(By.xpath("//p[contains(normalize-space(),'Invalid')]")).getText();
+		Assert.assertEquals(actualError, "Invalid credentials");
 	}
 }
