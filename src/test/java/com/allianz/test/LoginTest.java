@@ -1,32 +1,35 @@
 package com.allianz.test;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.allianz.base.AutomationWrapper;
+import com.allianz.pages.DashboardPage;
 import com.allianz.pages.LoginPage;
 import com.allianz.utils.DataUtils;
 
 public class LoginTest extends AutomationWrapper {
-	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class)
-	public void validLoginTest(String username,String password,String expectedHeader) {
-		
-		LoginPage.enterUsername(driver, username);
-		LoginPage.enterPassword(driver, password);
-		LoginPage.clickOnLogin(driver);
+	@Test(dataProvider = "commonDataProvider", dataProviderClass = DataUtils.class)
+	public void validLoginTest(String username, String password, String expectedHeader) {
 
-		String actualHeader = driver.findElement(By.xpath("//h6[contains(normalize-space(),'Dash')]")).getText();
-		Assert.assertEquals(actualHeader,expectedHeader);
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.enterUsername(username);
+		loginPage.enterPassword(password);
+		loginPage.clickOnLogin();
+
+		DashboardPage dashboardPage=new DashboardPage(driver);
+		String actualHeader = dashboardPage.getDashboardHeader();
+		Assert.assertEquals(actualHeader, expectedHeader);
 	}
 
-	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class)
+	@Test(dataProvider = "commonDataProvider", dataProviderClass = DataUtils.class)
 	public void invalidLoginTest(String username, String password, String expectedError) {
-		LoginPage.enterUsername(driver, username);
-		LoginPage.enterPassword(driver, password);
-		LoginPage.clickOnLogin(driver);
-
-		String actualError = driver.findElement(By.xpath("//p[contains(normalize-space(),'Invalid')]")).getText();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.enterUsername(username);
+		loginPage.enterPassword(password);
+		loginPage.clickOnLogin();
+		
+		String actualError =loginPage.getInvalidErrorMessage();
 		Assert.assertEquals(actualError, expectedError);
 	}
 }
