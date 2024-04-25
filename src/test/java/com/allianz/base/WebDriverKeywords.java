@@ -18,5 +18,13 @@ public class WebDriverKeywords {
 	{
 		driver.findElement(locator).click();
 	}
+	public String getText(By locator)
+	{
+		return driver.findElement(locator).getText();
+	}
+	public String getAttributValue(By locator,String attributeName)
+	{
+		return driver.findElement(locator).getAttribute(attributeName);
+	}
 
 }

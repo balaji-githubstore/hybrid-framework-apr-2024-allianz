@@ -34,15 +34,18 @@ public class LoginPage extends WebDriverKeywords {
 	}
 
 	public String getInvalidErrorMessage() {
-		return driver.findElement(errorLocator).getText();
+		//return driver.findElement(errorLocator).getText();
+		return super.getText(errorLocator);
 	}
 
 	public String getUsernamePlaceholder() {
-		return driver.findElement(usernameLocator).getAttribute("placeholder");
+		//return driver.findElement(usernameLocator).getAttribute("placeholder");
+		return getAttributValue(usernameLocator, "placeholder");
 	}
 
 	public String getPasswordPlaceholder() {
-		return driver.findElement(passwordLocator).getAttribute("placeholder");
+		//return driver.findElement(passwordLocator).getAttribute("placeholder")
+		return getAttributValue(passwordLocator, "placeholder");
 	}
 	// getHeader()
 	// clickOnForgotPassword()
