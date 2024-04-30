@@ -28,5 +28,10 @@ public class AddEmployeeTest extends AutomationWrapper {
 		String actualError=driver.findElement(By.xpath("//span[contains(normalize-space(),'File type')]")).getText();
 		Assert.assertTrue(actualError.contains("File type not allowed"));  //expect true
 	}
+	
+	public void addValidEmployeeTest()
+	{
+		
+	}
 
 }
