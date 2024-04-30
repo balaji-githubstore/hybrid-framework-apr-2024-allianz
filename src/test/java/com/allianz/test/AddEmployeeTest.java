@@ -10,7 +10,7 @@ import com.allianz.base.AutomationWrapper;
 
 public class AddEmployeeTest extends AutomationWrapper {
 	
-	@Test
+	@Test(groups = {"addemployee","smoke"})
 	public void uploadInvalidDisplayPictureTest()
 	{
 		File file=new File("src/test/resources/files/xpath.txt");
