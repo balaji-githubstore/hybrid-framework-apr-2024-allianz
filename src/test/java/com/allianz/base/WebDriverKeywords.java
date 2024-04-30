@@ -1,5 +1,7 @@
 package com.allianz.base;
 
+import java.util.ArrayList;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -13,18 +15,28 @@ public class WebDriverKeywords {
 	public void setInputText(By locator, String text) {
 		driver.findElement(locator).sendKeys(text);
 	}
-	
-	public void clickElement(By locator)
-	{
+
+	public void clickElement(By locator) {
 		driver.findElement(locator).click();
 	}
-	public String getText(By locator)
-	{
+
+	public String getText(By locator) {
 		return driver.findElement(locator).getText();
 	}
-	public String getAttributValue(By locator,String attributeName)
-	{
+
+	public String getAttributValue(By locator, String attributeName) {
 		return driver.findElement(locator).getAttribute(attributeName);
+	}
+
+	public void switchtTabByTitle(String title) {
+		ArrayList<String> windows = new ArrayList<String>(driver.getWindowHandles());
+
+		for (String win : windows) {
+			driver.switchTo().window(win);
+			if (driver.getTitle().equals(title)) {
+				break;
+			}
+		}
 	}
 
 }
