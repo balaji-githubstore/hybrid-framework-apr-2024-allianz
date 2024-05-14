@@ -6,8 +6,10 @@
       <class name="com.allianz.test.LoginUITest">
         <methods>
           <include name="teardown"/>
+          <include name="end"/>
           <include name="applicationDescriptionTest"/>
           <include name="setup"/>
+          <include name="init"/>
           <include name="titleTest"/>
         </methods>
       </class> <!-- com.allianz.test.LoginUITest -->
