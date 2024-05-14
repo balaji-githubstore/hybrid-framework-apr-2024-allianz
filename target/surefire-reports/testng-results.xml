@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-03T00:22:57 PDT" name="Orange HRM Suite" finished-at="2024-05-03T00:23:25 PDT" duration-ms="27858">
+    <groups>
+      <group name="ui">
+        <method signature="LoginUITest.applicationDescriptionTest()[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" name="applicationDescriptionTest" class="com.allianz.test.LoginUITest"/>
+        <method signature="LoginUITest.titleTest()[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" name="titleTest" class="com.allianz.test.LoginUITest"/>
+      </group> <!-- ui -->
+      <group name="smoke">
+        <method signature="LoginUITest.titleTest()[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" name="titleTest" class="com.allianz.test.LoginUITest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2024-05-03T00:22:57 PDT" name="UI-Chrome Test" finished-at="2024-05-03T00:23:25 PDT" duration-ms="27858">
+      <class name="com.allianz.test.LoginUITest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" started-at="2024-05-03T00:22:57 PDT" name="setup" finished-at="2024-05-03T00:23:08 PDT" duration-ms="10909" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ch]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="applicationDescriptionTest()[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" started-at="2024-05-03T00:23:08 PDT" name="applicationDescriptionTest" finished-at="2024-05-03T00:23:09 PDT" duration-ms="1068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applicationDescriptionTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" started-at="2024-05-03T00:23:09 PDT" name="teardown" finished-at="2024-05-03T00:23:10 PDT" duration-ms="429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" started-at="2024-05-03T00:23:10 PDT" name="setup" finished-at="2024-05-03T00:23:24 PDT" duration-ms="14908" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ch]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="titleTest()[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" started-at="2024-05-03T00:23:24 PDT" name="titleTest" finished-at="2024-05-03T00:23:25 PDT" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.allianz.test.LoginUITest@5a56cdac]" started-at="2024-05-03T00:23:25 PDT" name="teardown" finished-at="2024-05-03T00:23:25 PDT" duration-ms="375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.allianz.test.LoginUITest -->
+    </test> <!-- UI-Chrome Test -->
+  </suite> <!-- Orange HRM Suite -->
+</testng-results>
