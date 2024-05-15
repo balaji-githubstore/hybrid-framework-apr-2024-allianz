@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-15T03:57:07 PDT" name="Suite" finished-at="2024-05-15T03:57:07 PDT" duration-ms="509">
+    <groups>
+    </groups>
+    <test started-at="2024-05-15T03:57:07 PDT" name="Test" finished-at="2024-05-15T03:57:07 PDT" duration-ms="509">
+      <class name="com.allianz.test.DemoReadJson">
+        <test-method signature="readJosn()[pri:0, instance:com.allianz.test.DemoReadJson@f5acb9d]" started-at="2024-05-15T03:57:07 PDT" name="readJosn" finished-at="2024-05-15T03:57:07 PDT" duration-ms="403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readJosn -->
+      </class> <!-- com.allianz.test.DemoReadJson -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
